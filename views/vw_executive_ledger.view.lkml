@@ -30,11 +30,10 @@ view: vw_executive_ledger {
     sql: ${TABLE}.category_name ;;
   }
 
-  dimension: dept_name {
-    description: "The name of the business department responsible for the expense."
+  dimension: department {
     type: string
-    label: "Department"  # This tells Gemini: "If they say Department, use this field!"
     sql: ${TABLE}.DEPT_NAME ;;
+    description: "Business department for the ledger entry."
   }
 
   dimension: country_name {

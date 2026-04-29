@@ -1,16 +1,6 @@
 view: regions {
-  sql_table_name: `RB_INTEL_LEDGER.REGIONS` ;;
-  drill_fields: [region_id]
+sql_table_name: `rahulbatta-project.oracle_ledger_sync.RB_INTEL_LEDGER_19C_REGIONS` ;;
 
-  dimension: region_id {
-    primary_key: yes
-    type: string
-    sql: ${TABLE}.REGION_ID ;;
-  }
-  dimension: continent {
-    type: string
-    sql: ${TABLE}.CONTINENT ;;
-  }
   dimension: datastream_metadata__source_timestamp {
     type: number
     sql: ${TABLE}.datastream_metadata.source_timestamp ;;
@@ -23,12 +13,20 @@ view: regions {
     group_label: "Datastream Metadata"
     group_item_label: "Uuid"
   }
+  dimension: description {
+    type: string
+    sql: ${TABLE}.DESCRIPTION ;;
+  }
+  dimension: region_id {
+    type: string
+    sql: ${TABLE}.REGION_ID ;;
+  }
   dimension: region_name {
     type: string
     sql: ${TABLE}.REGION_NAME ;;
   }
   measure: count {
     type: count
-    drill_fields: [region_id, region_name, countries.count]
+    drill_fields: [region_name]
   }
 }

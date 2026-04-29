@@ -1,6 +1,10 @@
 view: expense_categories {
-  sql_table_name: `RB_INTEL_LEDGER.EXPENSE_CATEGORIES` ;;
+sql_table_name: `rahulbatta-project.oracle_ledger_sync.RB_INTEL_LEDGER_19C_EXPENSE_CATEGORIES` ;;
 
+  dimension: budget_limit {
+    type: string
+    sql: ${TABLE}.BUDGET_LIMIT ;;
+  }
   dimension: category_id {
     type: string
     sql: ${TABLE}.CATEGORY_ID ;;

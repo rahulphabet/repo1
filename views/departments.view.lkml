@@ -1,5 +1,5 @@
 view: departments {
-  sql_table_name: `RB_INTEL_LEDGER.DEPARTMENTS` ;;
+  sql_table_name: `rahulbatta-project.oracle_ledger_sync.RB_INTEL_LEDGER_19C_DEPARTMENTS` ;;
 
   dimension: datastream_metadata__source_timestamp {
     type: number

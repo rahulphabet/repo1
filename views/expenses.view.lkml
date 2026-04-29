@@ -1,12 +1,6 @@
 view: expenses {
-  sql_table_name: `RB_INTEL_LEDGER.EXPENSES` ;;
-  drill_fields: [expense_id]
+  sql_table_name: `rahulbatta-project.oracle_ledger_sync.RB_INTEL_LEDGER_19C_EXPENSES` ;;
 
-  dimension: expense_id {
-    primary_key: yes
-    type: string
-    sql: ${TABLE}.EXPENSE_ID ;;
-  }
   dimension: amount {
     type: number
     sql: ${TABLE}.AMOUNT ;;
@@ -41,6 +35,10 @@ view: expenses {
     datatype: datetime
     sql: ${TABLE}.EXPENSE_DATE ;;
   }
+  dimension: expense_id {
+    type: string
+    sql: ${TABLE}.EXPENSE_ID ;;
+  }
   dimension: merchant_name {
     type: string
     sql: ${TABLE}.MERCHANT_NAME ;;
@@ -51,6 +49,6 @@ view: expenses {
   }
   measure: count {
     type: count
-    drill_fields: [expense_id, merchant_name, vw_executive_ledger.count]
+    drill_fields: [merchant_name]
   }
 }

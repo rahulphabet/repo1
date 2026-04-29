@@ -1,9 +1,7 @@
 view: countries {
-  sql_table_name: `RB_INTEL_LEDGER.COUNTRIES` ;;
-  drill_fields: [country_id]
+  sql_table_name: `rahulbatta-project.oracle_ledger_sync.RB_INTEL_LEDGER_19C_COUNTRIES` ;;
 
   dimension: country_id {
-    primary_key: yes
     type: string
     sql: ${TABLE}.COUNTRY_ID ;;
   }
@@ -25,11 +23,10 @@ view: countries {
   }
   dimension: region_id {
     type: string
-    # hidden: yes
     sql: ${TABLE}.REGION_ID ;;
   }
   measure: count {
     type: count
-    drill_fields: [country_id, country_name, regions.region_id, regions.region_name]
+    drill_fields: [country_name]
   }
 }

@@ -1,5 +1,5 @@
 view: employees {
-  sql_table_name: `RB_INTEL_LEDGER.EMPLOYEES` ;;
+sql_table_name: `rahulbatta-project.oracle_ledger_sync.RB_INTEL_LEDGER_19C_EMPLOYEES` ;;
 
   dimension: country_id {
     type: string

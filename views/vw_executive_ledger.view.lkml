@@ -30,6 +30,13 @@ view: vw_executive_ledger {
     sql: ${TABLE}.category_name ;;
   }
 
+  dimension: dept_name {
+    description: "The name of the business department responsible for the expense."
+    type: string
+    label: "Department"  # This tells Gemini: "If they say Department, use this field!"
+    sql: ${TABLE}.DEPT_NAME ;;
+  }
+
   dimension: country_name {
     type: string
     map_layer_name: countries # Tells Looker to use a geographic map for this!

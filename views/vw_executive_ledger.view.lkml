@@ -19,11 +19,11 @@ view: vw_executive_ledger {
     sql: ${TABLE}.allocated_budget ;;
   }
 
-  dimension_group: expense_date {
-    type: time
-    timeframes: [raw, date, week, month, quarter, year]
-    sql: ${TABLE}.expense_date ;;
-  }
+ dimension_group: expense_date {
+  type: time
+  timeframes: [raw, date, week, month, quarter, year]
+  sql: CAST(${TABLE}.EXPENSE_DATE AS TIMESTAMP) ;; # Explicitly cast to Timestamp
+ }
 
   dimension: category_name {
     type: string

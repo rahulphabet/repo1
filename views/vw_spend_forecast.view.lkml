@@ -1,5 +1,5 @@
 view: vw_spend_forecast {
-  sql_table_name: `rahulbatta-project.RB_INTEL_LEDGER.vw_spend_forecast` ;;
+  sql_table_name: `rahulbatta-project.oracle_ledger_sync.vw_spend_forecast` ;;
 
   # --- DIMENSIONS ---
   dimension_group: expense_date {

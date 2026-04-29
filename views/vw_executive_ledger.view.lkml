@@ -1,6 +1,6 @@
 view: vw_executive_ledger {
   # This line connects this specific LookML file to your BigQuery view
-  sql_table_name: `rahulbatta-project.RB_INTEL_LEDGER.vw_executive_ledger` ;;
+  sql_table_name: `rahulbatta-project.oracle_ledger_sync.vw_executive_ledger` ;;
 
   # --- DIMENSIONS (Attributes to slice data by) ---
   dimension: expense_id {
